@@ -1,0 +1,31 @@
+/* Define a largura e o alinhamento da navbar */
+.navbar {
+    width: 20%;
+    border: 2px solid black; /* Define a espessura e a cor da borda */
+    border-radius: 8px; /* Define a borda arredondada de 10px */
+    display: flex; /* Usa o flexbox para alinhar os itens horizontalmente */
+    flex-direction: row; /* Define a direção dos itens para ser em linha */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 5px; /* Adiciona preenchimento ao redor da navbar */
+    margin-bottom: 50px;
+    gap: 10px;
+}
+
+/* Estilo para o contêiner da marca da navbar */
+.navbar > div{
+    display: flex;
+    gap: inherit;
+}
+
+@media (max-width: 1050px) {
+    .navbar {
+        width: 50%;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .navbar {
+        width: auto;
+    }
+}

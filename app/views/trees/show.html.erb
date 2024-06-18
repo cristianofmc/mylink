@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @tree %>
+<div>
+<%= link_to "< Back to trees", trees_path %>
+<% if user_signed_in? %> 
+
+  <% if current_user.id == @tree.user_id %> <!-- Verifica se o usuário atual é o proprietário da árvore -->
+
+       | <%= link_to "Edit this tree", edit_tree_path(@tree) %>
+
+
+
+      <div class="destroy">
+        <%= button_to "Destroy this tree", @tree, method: :delete %>
+      </div>
+    </div>
+  <% end %>
+<% end %>

@@ -1,0 +1,12 @@
+<div class="main">
+    <h1>Unlock Your Online Potential!</h1>
+    <h4>Transform your digital presence with a personalized link page. Stand out, captivate your audience, and boost your brand effortlessly. Your journey to a stronger online identity starts here!</h4>
+
+    <%= link_to "Trees", trees_path %>
+
+    <% if current_user %>
+        <% if current_user.tree %>
+            <%= link_to "View my Tree", current_user.tree %>
+        <% end %>
+    <% end %>
+</div>

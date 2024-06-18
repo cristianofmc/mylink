@@ -1,0 +1,45 @@
+.tree_item{
+    width: 30%;
+    border: 2px solid black; /* Define a espessura e a cor da borda */
+    border-radius: 5px; /* Define a borda arredondada de 10px */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 10px 15px; /* Adiciona preenchimento ao redor da navbar */
+    margin-right: 0; /* Garante que a navbar fique alinhada à esquerda */
+    margin-bottom: 10px;
+}
+
+.tree_item > div{
+    margin: 8px;
+}
+
+.destroy > form > button{
+    background-color: red;
+    font-weight: bold;
+}
+
+.destroy > form > button:hover{
+    color: red;
+}
+
+.destroy{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+
+.trees{
+    min-width: auto;
+}
+
+
+@media (max-width: 1000px) {
+    .tree_item {
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .tree_item {
+        width: auto;
+    }
+}

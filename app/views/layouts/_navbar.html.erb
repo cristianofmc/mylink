@@ -1,0 +1,22 @@
+
+<%= stylesheet_link_tag "navbar" %>
+
+<div class="navbar">
+    <div class="navbar-brand">
+        <%= link_to root_path do %>
+            <%= image_tag("keyboard_key_t.ico", style: "width: 40px;") %>
+        <% end %>
+    </div>
+
+    <div class="navbar-links">
+        <% if user_signed_in? %>
+            <div><%= link_to "My account", edit_user_registration_path %></div>
+            <div><%= link_to "Sign out", destroy_user_session_path %></div>
+        <% end %>
+        <% unless user_signed_in? %>
+            <div><%= link_to "Sign in", new_user_session_path %></div>
+            <div><%= link_to "Sign up", new_user_registration_path %></div>
+            <div><%= link_to "Pricing", home_pricing_path %></div>
+        <% end %>
+    </div>
+</div>

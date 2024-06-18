@@ -1,0 +1,98 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+    font-family: "Arial", sans-serif; /* Specify the font family */
+    font-size: 16px; /* Specify the font size */
+}
+
+body > *{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+form {
+    width: 30%;
+    border: 2px solid black; /* Define a espessura e a cor da borda */
+    border-radius: 5px; /* Define a borda arredondada de 10px */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 10px 15px; /* Adiciona preenchimento ao redor da navbar */
+    margin-right: 0; /* Garante que a navbar fique alinhada à esquerda */
+    margin-bottom: 10px;
+}
+
+form > div{
+    margin: 8px;
+}
+
+/* Estilizando os botões de envio (submit button) */
+input[type="submit"],
+button[type="submit"] {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: 2px solid black;
+    text-decoration: none;
+    cursor: pointer;
+
+    background-color: black; /* Cor de fundo inicial */
+    color: white; /* Cor do texto inicial */
+}
+
+/* Estilizando o hover */
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+    background-color: white; /* Tornando o fundo branco no hover */
+    color: black; /* Mudando a cor do texto para preto no hover */
+}
+
+/* Estilizando o click */
+input[type="submit"]:active,
+button[type="submit"]:active {
+    background-color: #888888; /* Tom de cinza intermediário quando clicado */
+    color: black; /* Mudando a cor do texto para preto quando clicado */
+}
+
+.main {
+    max-width: 50%;
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+    padding: 20px;
+}
+
+.main h1, .main h4 {
+    margin: 10px 0;
+}
+
+.main a {
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+
+@media (max-width: 1000px) {
+    form {
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    form {
+        width: auto;
+    }
+}
