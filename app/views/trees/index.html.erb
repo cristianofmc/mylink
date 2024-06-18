@@ -13,7 +13,7 @@
   </div>
 
   <% if current_user %>
-    <% unless current_user.tree %>
+    <% unless current_user.tree.present? %>
       <div class="new_tree"><%= link_to "New tree", new_tree_path %></div>
     <% end %>
   <% end %>
